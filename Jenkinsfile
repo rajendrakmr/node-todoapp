@@ -58,7 +58,7 @@ pipeline {
             )
         }
         always {
-            echo "This runs always - success ya failure."
+            echo "hello cloud with rk"
         }
     }
 }
