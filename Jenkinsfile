@@ -46,7 +46,7 @@ pipeline {
                 from: 'cloudwithrk@gmail.com',
                 to: 'rajendraakmr@gmail.com',
                 subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: "Good news! Job ${env.JOB_NAME} build #${env.BUILD_NUMBER} SUCCESS!\n\nCheck it: ${env.BUILD_URL}"
+                body: "Good news! Job ${env.JOB_NAME} build #${env.BUILD_NUMBER} SUCCESS!\n\nCheck it: http://52.215.51.138:3000"
             )
         }
         failure {
@@ -54,7 +54,7 @@ pipeline {
                 from: 'cloudwithrk@gmail.com',
                 to: 'rajendraakmr@gmail.com',
                 subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: "Oops! Job ${env.JOB_NAME} build #${env.BUILD_NUMBER} FAILED!\n\nCheck it: ${env.BUILD_URL}"
+                body: "Oops! Job ${env.JOB_NAME} build #${env.BUILD_NUMBER} FAILED!\n\nCheck it:  http://52.215.51.138:3000"
             )
         }
         always {
